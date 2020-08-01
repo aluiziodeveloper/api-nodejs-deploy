@@ -1,0 +1,30 @@
+version: "3.1"
+services:
+  db:
+    image: postgres
+    container_name: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nodeapi
+      PGDATA: /var/lib/postgresql/data
+
+  api:
+    image: node:latest
+    container_name: api
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=production
+    command: npm start
+    logging:
+      options:
+        max-size: "8m"
+        max-file: "6"
