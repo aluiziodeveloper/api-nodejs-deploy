@@ -6,8 +6,6 @@ services:
     depends_on:
       - db
       - api
-    volumes:
-      - ./reverse-proxy/nginx.conf:/etc/nginx/nginx.conf
     ports:
       - 80:80
     networks:
