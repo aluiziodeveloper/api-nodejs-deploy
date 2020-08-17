@@ -44,7 +44,7 @@ Se você trabalha como desenvolvedor de apps no Windows, mas usa o Linux em dual
 
 ### Instalação e execução
 
-1. Faça um clone do repositório: `git clone https://github.com/jorgealuizio/exemplo-nodejs-postgres.git`.
+1. Faça um clone do repositório: `git clone https://github.com/aluiziodeveloper/api-nodejs-deploy.git`.
 
 2. Entre na pasta `cd exemplo-nodejs-postgres`.
    
